@@ -14,7 +14,7 @@ namespace Editor_Multimedia
 {
     public partial class CAMARA : Form
     {
-        private bool hayDispositivos = false;
+        private bool hayDispositivos;
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice Micamara;
 
@@ -42,7 +42,7 @@ namespace Editor_Multimedia
             if(misDispositivos.Count > 0)
             {
                 hayDispositivos = true;
-                for(int i=0; i < misDispositivos.Count;i++)
+                for(int i=0; i < misDispositivos.Count; i++)
                 {
 
                     rjComboBox2.Items.Add(misDispositivos[i].Name.ToString());
@@ -62,14 +62,13 @@ namespace Editor_Multimedia
 
             if(Micamara != null && Micamara.IsRunning)
             {
+                MessageBox.Show("Camara disponible");
                 Micamara.SignalToStop();
+                Micamara.WaitForStop();
                 Micamara = null;
 
             }
-            else
-            {
-                MessageBox.Show("Camara no disponible");
-            }
+          
         }
 
         private void BTN_INICIAR_VIDEO_Click(object sender, EventArgs e)
@@ -80,10 +79,12 @@ namespace Editor_Multimedia
             Micamara = new VideoCaptureDevice(valor);
             Micamara.NewFrame += new NewFrameEventHandler(capturavideo);
             Micamara.Start();
+           
         }
 
         private void capturavideo(object sender, NewFrameEventArgs eventArgs )
         {
+          
             Bitmap imagen = (Bitmap)eventArgs.Frame.Clone();
             pictureBox1.Image = imagen;
         }

@@ -89,6 +89,12 @@
     <Compile Include="LIENZO.Designer.cs">
       <DependentUpon>LIENZO.cs</DependentUpon>
     </Compile>
+    <Compile Include="MANUAL_USUARIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MANUAL_USUARIO.Designer.cs">
+      <DependentUpon>MANUAL_USUARIO.cs</DependentUpon>
+    </Compile>
     <Compile Include="PANTALLA_INICIO%28FONDO%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LIENZO.resx">
       <DependentUpon>LIENZO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MANUAL_USUARIO.resx">
+      <DependentUpon>MANUAL_USUARIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PANTALLA_INICIO%28FONDO%29.resx">
       <DependentUpon>PANTALLA_INICIO%28FONDO%29.cs</DependentUpon>

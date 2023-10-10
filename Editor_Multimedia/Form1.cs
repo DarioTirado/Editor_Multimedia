@@ -176,5 +176,11 @@ namespace Editor_Multimedia
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+            AbrirForm(new MANUAL_USUARIO());
+        }
     }
 }
