@@ -72,14 +72,14 @@ namespace Editor_Multimedia
             this.panel3 = new System.Windows.Forms.Panel();
             this.BTN_FILTROS = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.BTN_HISTOGRAMA = new System.Windows.Forms.Button();
+            this.Histograma_pic = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Imagen_original = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.BTN_HISTOGRAMA = new System.Windows.Forms.Button();
             this.Menu_Central = new System.Windows.Forms.Panel();
             this.Menu_Barra_Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_restaurar)).BeginInit();
@@ -91,6 +91,7 @@ namespace Editor_Multimedia
             this.SUBMENU_OPCIONES.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_INICIO)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Histograma_pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen_original)).BeginInit();
             this.SuspendLayout();
             // 
@@ -256,8 +257,9 @@ namespace Editor_Multimedia
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(176, 30);
             this.button11.TabIndex = 27;
-            this.button11.Text = "filtro_9";
+            this.button11.Text = "Sal Pimienta";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // panel14
             // 
@@ -281,8 +283,9 @@ namespace Editor_Multimedia
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(176, 30);
             this.button12.TabIndex = 25;
-            this.button12.Text = "filtro_8";
+            this.button12.Text = "Mosaico";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // panel15
             // 
@@ -314,8 +317,9 @@ namespace Editor_Multimedia
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(176, 30);
             this.button13.TabIndex = 23;
-            this.button13.Text = "filtro_7";
+            this.button13.Text = "Sepia";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -331,8 +335,9 @@ namespace Editor_Multimedia
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(176, 30);
             this.button14.TabIndex = 21;
-            this.button14.Text = "filtro_6";
+            this.button14.Text = "Desaturacion";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // panel19
             // 
@@ -356,8 +361,9 @@ namespace Editor_Multimedia
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(176, 30);
             this.button15.TabIndex = 19;
-            this.button15.Text = "filtro_5";
+            this.button15.Text = "Gamma";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // panel20
             // 
@@ -381,8 +387,9 @@ namespace Editor_Multimedia
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(176, 30);
             this.button16.TabIndex = 17;
-            this.button16.Text = "filtro_4";
+            this.button16.Text = "Gradiente";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // panel21
             // 
@@ -406,8 +413,9 @@ namespace Editor_Multimedia
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(176, 30);
             this.button17.TabIndex = 15;
-            this.button17.Text = "filtro_3";
+            this.button17.Text = "Sobel";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // panel22
             // 
@@ -439,8 +447,9 @@ namespace Editor_Multimedia
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(176, 30);
             this.button18.TabIndex = 13;
-            this.button18.Text = "filtro_2";
+            this.button18.Text = "Glitch";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -456,8 +465,9 @@ namespace Editor_Multimedia
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(176, 30);
             this.button19.TabIndex = 11;
-            this.button19.Text = "filtro_1";
+            this.button19.Text = "Negativo";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // SUBMENU_OPCIONES
             // 
@@ -647,19 +657,49 @@ namespace Editor_Multimedia
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.panel6.Controls.Add(this.BTN_HISTOGRAMA);
+            this.panel6.Controls.Add(this.Histograma_pic);
             this.panel6.Controls.Add(this.panel11);
             this.panel6.Controls.Add(this.button9);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.Imagen_original);
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.button8);
-            this.panel6.Controls.Add(this.panel9);
-            this.panel6.Controls.Add(this.BTN_HISTOGRAMA);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(823, 39);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 513);
             this.panel6.TabIndex = 3;
+            // 
+            // BTN_HISTOGRAMA
+            // 
+            this.BTN_HISTOGRAMA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_HISTOGRAMA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.BTN_HISTOGRAMA.FlatAppearance.BorderSize = 0;
+            this.BTN_HISTOGRAMA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
+            this.BTN_HISTOGRAMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_HISTOGRAMA.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_HISTOGRAMA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_HISTOGRAMA.Image = ((System.Drawing.Image)(resources.GetObject("BTN_HISTOGRAMA.Image")));
+            this.BTN_HISTOGRAMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_HISTOGRAMA.Location = new System.Drawing.Point(0, 291);
+            this.BTN_HISTOGRAMA.Name = "BTN_HISTOGRAMA";
+            this.BTN_HISTOGRAMA.Size = new System.Drawing.Size(217, 34);
+            this.BTN_HISTOGRAMA.TabIndex = 11;
+            this.BTN_HISTOGRAMA.Text = "Histograma";
+            this.BTN_HISTOGRAMA.UseVisualStyleBackColor = false;
+            this.BTN_HISTOGRAMA.Click += new System.EventHandler(this.BTN_HISTOGRAMA_Click);
+            // 
+            // Histograma_pic
+            // 
+            this.Histograma_pic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.Histograma_pic.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Histograma_pic.Location = new System.Drawing.Point(0, 326);
+            this.Histograma_pic.Name = "Histograma_pic";
+            this.Histograma_pic.Size = new System.Drawing.Size(200, 187);
+            this.Histograma_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Histograma_pic.TabIndex = 18;
+            this.Histograma_pic.TabStop = false;
             // 
             // panel11
             // 
@@ -733,32 +773,7 @@ namespace Editor_Multimedia
             this.button8.TabIndex = 13;
             this.button8.Text = "Restaurar";
             this.button8.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
-            this.panel9.Location = new System.Drawing.Point(0, 148);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(5, 32);
-            this.panel9.TabIndex = 12;
-            // 
-            // BTN_HISTOGRAMA
-            // 
-            this.BTN_HISTOGRAMA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
-            this.BTN_HISTOGRAMA.FlatAppearance.BorderSize = 0;
-            this.BTN_HISTOGRAMA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
-            this.BTN_HISTOGRAMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_HISTOGRAMA.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_HISTOGRAMA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BTN_HISTOGRAMA.Image = ((System.Drawing.Image)(resources.GetObject("BTN_HISTOGRAMA.Image")));
-            this.BTN_HISTOGRAMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_HISTOGRAMA.Location = new System.Drawing.Point(3, 146);
-            this.BTN_HISTOGRAMA.Name = "BTN_HISTOGRAMA";
-            this.BTN_HISTOGRAMA.Size = new System.Drawing.Size(217, 34);
-            this.BTN_HISTOGRAMA.TabIndex = 11;
-            this.BTN_HISTOGRAMA.Text = "Histograma";
-            this.BTN_HISTOGRAMA.UseVisualStyleBackColor = false;
-            this.BTN_HISTOGRAMA.Click += new System.EventHandler(this.BTN_HISTOGRAMA_Click);
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Menu_Central
             // 
@@ -794,6 +809,7 @@ namespace Editor_Multimedia
             ((System.ComponentModel.ISupportInitialize)(this.BTN_INICIO)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Histograma_pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen_original)).EndInit();
             this.ResumeLayout(false);
 
@@ -825,7 +841,6 @@ namespace Editor_Multimedia
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button BTN_HISTOGRAMA;
         private System.Windows.Forms.Panel SUBMENU_FILTROS;
         private System.Windows.Forms.Panel panel12;
@@ -851,6 +866,7 @@ namespace Editor_Multimedia
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button button9;
         public System.Windows.Forms.PictureBox Imagen_original;
+        private System.Windows.Forms.PictureBox Histograma_pic;
     }
 }
 

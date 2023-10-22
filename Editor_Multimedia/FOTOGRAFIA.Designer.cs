@@ -57,6 +57,7 @@ namespace Editor_Multimedia
             this.Imagen_lienzo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Imagen_lienzo.TabIndex = 2;
             this.Imagen_lienzo.TabStop = false;
+            this.Imagen_lienzo.Click += new System.EventHandler(this.Imagen_lienzo_Click);
             // 
             // FOTOGRAFIA
             // 

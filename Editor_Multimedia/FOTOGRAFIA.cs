@@ -27,5 +27,10 @@ namespace Editor_Multimedia
           
             
         }
+
+        private void Imagen_lienzo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
