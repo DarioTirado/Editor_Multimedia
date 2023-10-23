@@ -12,10 +12,13 @@ using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
 
 
+
+
 namespace Editor_Multimedia
 {
     public partial class VIDEO : Form
     {
+        private bool isPaused = false;
         private long lastFramePos = 0;
         private bool isPlaying = false;
         private Image<Bgr, byte> currentFrame;
@@ -23,6 +26,8 @@ namespace Editor_Multimedia
         private double duracion;
         private double frameCount;
         private VideoCapture grabber;
+        private Bitmap bmpVideo;
+        private Bitmap original;
         public VIDEO()
         {
             InitializeComponent();
@@ -30,8 +35,10 @@ namespace Editor_Multimedia
 
         private void BTN_SUBIR_ARCHIVO_I_Click(object sender, EventArgs e)
         {
+            
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Files (.mp4)|*.mp4";
+
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 grabber = new VideoCapture(ofd.FileName);
@@ -40,24 +47,48 @@ namespace Editor_Multimedia
                 Mat m = new Mat();
                 grabber.Read(m);
 
-                // Obtener información del video
-                duracion = grabber.Get(CapProp.FrameCount);
-                frameCount = grabber.Get(CapProp.PosFrames);
-
+                duracion = grabber.GetCaptureProperty(CapProp.FrameCount);
+                frameCount = grabber.GetCaptureProperty(CapProp.PosFrames);
                 videoLoad = true;
             }
         }
-        private void ReproducirVideo()
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (videoLoad)
+            {
+                if (isPaused)
+                {
+                    isPlaying = true;
+                    isPaused = false;
+                    Application.Idle += reproducirVideo;
+                }
+                else
+                {
+                    isPlaying = true;
+                    lastFramePos = (long)grabber.GetCaptureProperty(CapProp.PosFrames);
+                    Application.Idle += reproducirVideo;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se cargó el video", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void reproducirVideo(object sender, EventArgs e)
         {
             if (isPlaying && frameCount < duracion - 1)
             {
                 Mat m = new Mat();
-                grabber.Read(m);
+                 grabber.Read(m);
 
-                // currentFrame = new Image<Bgr, byte>(m.ToBitmap());
-                currentFrame.Resize(videoOri.Width, videoOri.Height, Inter.Cubic);
+                Image<Bgr, byte> currentFrame = new Image<Bgr, byte>(m.Width, m.Height);
+                m.CopyTo(currentFrame);
+                currentFrame = currentFrame.Resize(videoOri.Width, videoOri.Height, Inter.Cubic);
 
-                frameCount = grabber.Get(CapProp.PosFrames);
+                frameCount = grabber.GetCaptureProperty(CapProp.PosFrames);
 
                 videoOri.Image = currentFrame.ToBitmap();
 
@@ -66,11 +97,14 @@ namespace Editor_Multimedia
                 // Actualizar la posición del TrackBar
                 int trackBarValue = (int)(frameCount * macTrackBar1.Maximum / duracion);
                 macTrackBar1.Value = trackBarValue;
-
-
-
-
+            }
+            else if (!isPlaying)
+            {
+                frameCount = 0;
+                grabber.SetCaptureProperty(CapProp.PosFrames, lastFramePos);
+                Application.Idle -= reproducirVideo;
             }
         }
+
     }
 }

@@ -49,7 +49,7 @@ namespace Editor_Multimedia
             this.Imagen_lienzo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(48)))), ((int)(((byte)(74)))));
             this.Imagen_lienzo.Location = new System.Drawing.Point(12, 41);
             this.Imagen_lienzo.Name = "Imagen_lienzo";
-            this.Imagen_lienzo.Size = new System.Drawing.Size(462, 248);
+            this.Imagen_lienzo.Size = new System.Drawing.Size(371, 211);
             this.Imagen_lienzo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Imagen_lienzo.TabIndex = 3;
             this.Imagen_lienzo.TabStop = false;
@@ -75,10 +75,10 @@ namespace Editor_Multimedia
             // videoOri
             // 
             this.videoOri.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.videoOri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(48)))), ((int)(((byte)(74)))));
-            this.videoOri.Location = new System.Drawing.Point(499, 41);
+            this.videoOri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(48)))), ((int)(((byte)(74)))));
+            this.videoOri.Location = new System.Drawing.Point(593, 41);
             this.videoOri.Name = "videoOri";
-            this.videoOri.Size = new System.Drawing.Size(289, 144);
+            this.videoOri.Size = new System.Drawing.Size(195, 114);
             this.videoOri.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.videoOri.TabIndex = 22;
             this.videoOri.TabStop = false;
@@ -93,10 +93,11 @@ namespace Editor_Multimedia
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(604, 17);
+            this.label1.Location = new System.Drawing.Point(660, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 24;
@@ -104,6 +105,7 @@ namespace Editor_Multimedia
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(80)))), ((int)(((byte)(103)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -121,6 +123,7 @@ namespace Editor_Multimedia
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(80)))), ((int)(((byte)(103)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
@@ -137,6 +140,7 @@ namespace Editor_Multimedia
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(80)))), ((int)(((byte)(103)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
@@ -151,13 +155,14 @@ namespace Editor_Multimedia
             this.button3.Size = new System.Drawing.Size(40, 34);
             this.button3.TabIndex = 27;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(202, 17);
+            this.label2.Location = new System.Drawing.Point(165, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 21);
             this.label2.TabIndex = 28;

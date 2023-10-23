@@ -161,26 +161,8 @@ namespace Editor_Multimedia
 
         private void BTN_SUBIR_VIDEO_Click(object sender, EventArgs e)
         {
-            SUBMENU_OPCIONES.Visible = false;
-            SUBMENU_FILTROS.Visible = false;
 
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Files (.mp4)|*.mp4";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                grabber = new VideoCapture(ofd.FileName);
-                grabber.QueryFrame();
-
-                Mat m = new Mat();
-                grabber.Read(m);
-
-                // Obtener información del video
-                duracion = grabber.Get(CapProp.FrameCount);
-                frameCount = grabber.Get(CapProp.PosFrames);
-
-                videoLoad = true;
-            }
-
+            AbrirForm(new VIDEO());
         }
 
             private void BTN_EXPORTAR_Click(object sender, EventArgs e)
