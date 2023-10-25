@@ -27,6 +27,7 @@ namespace Editor_Multimedia
         private VideoCapture grabber;
         private Bitmap original;
         private Bitmap resultante;
+        private Bitmap resultantevid;
 
         private bool isPlaying = false;
         public Form1()
@@ -35,6 +36,14 @@ namespace Editor_Multimedia
             InitializeComponent();
             AbrirForm(new PANTALLA_INICIO_FONDO_());
         }
+
+        public PictureBox MiPictureBox { get; set; }
+
+        public void ActualizarPictureBox(Image nuevaImagen)
+        {
+            Histograma_pic.Image = nuevaImagen;
+        }
+
         private void AbrirForm(object formnuevo)
 
         {
@@ -161,7 +170,8 @@ namespace Editor_Multimedia
 
         private void BTN_SUBIR_VIDEO_Click(object sender, EventArgs e)
         {
-
+            SUBMENU_OPCIONES.Visible = false;
+            SUBMENU_FILTROS.Visible = false;
             AbrirForm(new VIDEO());
         }
 
@@ -220,6 +230,7 @@ namespace Editor_Multimedia
                 AbrirForm(f2);
                 CalculateHistogram();
             }
+
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -318,6 +329,15 @@ namespace Editor_Multimedia
                 AbrirForm(f2);
                 CalculateHistogram();
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SUBMENU_FILTROS.Visible = false;
+            resultante = AplicarFiltroSaturacion(new Bitmap(original), 1.6);
+            FOTOGRAFIA f2 = new FOTOGRAFIA(resultante);
+            AbrirForm(f2);
+            CalculateHistogram();
         }
 
         //FILTROS
@@ -644,5 +664,37 @@ namespace Editor_Multimedia
             Histograma_pic.Refresh();
         }
 
+        static Bitmap AplicarFiltroSaturacion(Bitmap imagenOriginal, double factorSaturacion)
+        {
+            Bitmap imagenSaturada = new Bitmap(imagenOriginal.Width, imagenOriginal.Height);
+
+            for (int x = 0; x < imagenOriginal.Width; x++)
+            {
+                for (int y = 0; y < imagenOriginal.Height; y++)
+                {
+                    Color pixel = imagenOriginal.GetPixel(x, y);
+
+                    // Calcula nuevos valores para los componentes de color (RGB) con el factor de saturación
+                    int red = (int)Math.Min(255, pixel.R * factorSaturacion);
+                    int green = (int)Math.Min(255, pixel.G * factorSaturacion);
+                    int blue = (int)Math.Min(255, pixel.B * factorSaturacion);
+
+                    // Crea un nuevo color saturado
+                    Color nuevoPixel = Color.FromArgb(red, green, blue);
+
+                    // Asigna el nuevo color al bitmap saturado
+                    imagenSaturada.SetPixel(x, y, nuevoPixel);
+                }
+            }
+
+            return imagenSaturada;
+        }
+
+        private void Histograma_pic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

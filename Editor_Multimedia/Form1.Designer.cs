@@ -221,6 +221,7 @@ namespace Editor_Multimedia
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -232,8 +233,9 @@ namespace Editor_Multimedia
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(176, 30);
             this.button10.TabIndex = 29;
-            this.button10.Text = "filtro_10";
+            this.button10.Text = "Saturacion";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel13
             // 
@@ -246,6 +248,7 @@ namespace Editor_Multimedia
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -272,6 +275,7 @@ namespace Editor_Multimedia
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -306,6 +310,7 @@ namespace Editor_Multimedia
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -324,6 +329,7 @@ namespace Editor_Multimedia
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -350,6 +356,7 @@ namespace Editor_Multimedia
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -376,6 +383,7 @@ namespace Editor_Multimedia
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -402,6 +410,7 @@ namespace Editor_Multimedia
             // button17
             // 
             this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -436,6 +445,7 @@ namespace Editor_Multimedia
             // button18
             // 
             this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button18.FlatAppearance.BorderSize = 0;
             this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -454,6 +464,7 @@ namespace Editor_Multimedia
             // button19
             // 
             this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button19.FlatAppearance.BorderSize = 0;
             this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -501,6 +512,7 @@ namespace Editor_Multimedia
             // BTN_SUBIR_VIDEO
             // 
             this.BTN_SUBIR_VIDEO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.BTN_SUBIR_VIDEO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_SUBIR_VIDEO.FlatAppearance.BorderSize = 0;
             this.BTN_SUBIR_VIDEO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.BTN_SUBIR_VIDEO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -519,6 +531,7 @@ namespace Editor_Multimedia
             // BTN_SUBIR_IMAGEN
             // 
             this.BTN_SUBIR_IMAGEN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.BTN_SUBIR_IMAGEN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_SUBIR_IMAGEN.FlatAppearance.BorderSize = 0;
             this.BTN_SUBIR_IMAGEN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.BTN_SUBIR_IMAGEN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -545,6 +558,7 @@ namespace Editor_Multimedia
             // BTN_CAMARA
             // 
             this.BTN_CAMARA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.BTN_CAMARA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_CAMARA.FlatAppearance.BorderSize = 0;
             this.BTN_CAMARA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.BTN_CAMARA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -585,6 +599,7 @@ namespace Editor_Multimedia
             // 
             this.BTN_EXPORTAR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BTN_EXPORTAR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.BTN_EXPORTAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_EXPORTAR.FlatAppearance.BorderSize = 0;
             this.BTN_EXPORTAR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.BTN_EXPORTAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -613,6 +628,7 @@ namespace Editor_Multimedia
             // 
             this.BTN_OPCIONES.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BTN_OPCIONES.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.BTN_OPCIONES.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_OPCIONES.FlatAppearance.BorderSize = 0;
             this.BTN_OPCIONES.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.BTN_OPCIONES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -639,6 +655,7 @@ namespace Editor_Multimedia
             // BTN_FILTROS
             // 
             this.BTN_FILTROS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.BTN_FILTROS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_FILTROS.FlatAppearance.BorderSize = 0;
             this.BTN_FILTROS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.BTN_FILTROS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -700,6 +717,7 @@ namespace Editor_Multimedia
             this.Histograma_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Histograma_pic.TabIndex = 18;
             this.Histograma_pic.TabStop = false;
+            this.Histograma_pic.Click += new System.EventHandler(this.Histograma_pic_Click);
             // 
             // panel11
             // 
@@ -712,6 +730,7 @@ namespace Editor_Multimedia
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -760,6 +779,7 @@ namespace Editor_Multimedia
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(34)))), ((int)(((byte)(66)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -866,7 +886,7 @@ namespace Editor_Multimedia
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button button9;
         public System.Windows.Forms.PictureBox Imagen_original;
-        private System.Windows.Forms.PictureBox Histograma_pic;
+        public System.Windows.Forms.PictureBox Histograma_pic;
     }
 }
 

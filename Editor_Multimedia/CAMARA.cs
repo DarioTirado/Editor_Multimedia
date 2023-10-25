@@ -14,6 +14,7 @@ namespace Editor_Multimedia
 {
     public partial class CAMARA : Form
     {
+        private bool camara = true;
         private bool hayDispositivos;
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice Micamara;
@@ -62,24 +63,41 @@ namespace Editor_Multimedia
 
             if(Micamara != null && Micamara.IsRunning)
             {
-                MessageBox.Show("Camara disponible");
+              
                 Micamara.SignalToStop();
                 Micamara.WaitForStop();
                 Micamara = null;
-
+                MessageBox.Show("Video Cerrado");
             }
-          
+            if (Micamara == null)
+            {
+                MessageBox.Show("Ningun Dipositivo Seleccionado");
+                camara = false;
+            }
+            if (Micamara != null)
+            {
+                camara = true;
+            }
+
         }
 
         private void BTN_INICIAR_VIDEO_Click(object sender, EventArgs e)
         {
             CerrarCamara();
-            int i = rjComboBox2.SelectedIndex;
-            string valor = misDispositivos[i].MonikerString;          
-            Micamara = new VideoCaptureDevice(valor);
-            Micamara.NewFrame += new NewFrameEventHandler(capturavideo);
-            Micamara.Start();
-           
+            if (camara == true)
+            {
+                int i = rjComboBox2.SelectedIndex;
+                string valor = misDispositivos[i].MonikerString;
+                Micamara = new VideoCaptureDevice(valor);
+                Micamara.NewFrame += new NewFrameEventHandler(capturavideo);
+                MessageBox.Show("Camara disponible");
+                Micamara.Start();
+            }
+            else
+            {
+                MessageBox.Show("Camara no disponible");
+                camara = false;
+            }
         }
 
         private void capturavideo(object sender, NewFrameEventArgs eventArgs )
@@ -90,6 +108,11 @@ namespace Editor_Multimedia
         }
 
         private void CAMARA_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CerrarCamara();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             CerrarCamara();
         }

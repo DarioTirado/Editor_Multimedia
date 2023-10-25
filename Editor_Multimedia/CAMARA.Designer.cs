@@ -33,6 +33,7 @@ namespace Editor_Multimedia
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_INICIAR_VIDEO = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.rjComboBox2 = new Editor_Multimedia.RJComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,7 @@ namespace Editor_Multimedia
             // 
             this.BTN_INICIAR_VIDEO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_INICIAR_VIDEO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
+            this.BTN_INICIAR_VIDEO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTN_INICIAR_VIDEO.FlatAppearance.BorderSize = 0;
             this.BTN_INICIAR_VIDEO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.BTN_INICIAR_VIDEO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -71,13 +73,33 @@ namespace Editor_Multimedia
             this.BTN_INICIAR_VIDEO.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BTN_INICIAR_VIDEO.Image = ((System.Drawing.Image)(resources.GetObject("BTN_INICIAR_VIDEO.Image")));
             this.BTN_INICIAR_VIDEO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_INICIAR_VIDEO.Location = new System.Drawing.Point(585, 12);
+            this.BTN_INICIAR_VIDEO.Location = new System.Drawing.Point(493, 9);
             this.BTN_INICIAR_VIDEO.Name = "BTN_INICIAR_VIDEO";
-            this.BTN_INICIAR_VIDEO.Size = new System.Drawing.Size(191, 34);
+            this.BTN_INICIAR_VIDEO.Size = new System.Drawing.Size(146, 34);
             this.BTN_INICIAR_VIDEO.TabIndex = 22;
-            this.BTN_INICIAR_VIDEO.Text = "Iniciar Video";
+            this.BTN_INICIAR_VIDEO.Text = "        Iniciar Video";
             this.BTN_INICIAR_VIDEO.UseVisualStyleBackColor = false;
             this.BTN_INICIAR_VIDEO.Click += new System.EventHandler(this.BTN_INICIAR_VIDEO_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(645, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 34);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "       Parar Video";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // rjComboBox2
             // 
@@ -85,6 +107,7 @@ namespace Editor_Multimedia
             this.rjComboBox2.BackColor1 = System.Drawing.Color.WhiteSmoke;
             this.rjComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(48)))), ((int)(((byte)(118)))));
             this.rjComboBox2.BorderSize = 3;
+            this.rjComboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rjComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.rjComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.rjComboBox2.ForeColor = System.Drawing.Color.DimGray;
@@ -106,6 +129,7 @@ namespace Editor_Multimedia
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(80)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_INICIAR_VIDEO);
             this.Controls.Add(this.rjComboBox2);
             this.Controls.Add(this.label1);
@@ -126,5 +150,6 @@ namespace Editor_Multimedia
         private System.Windows.Forms.Label label1;
         private RJComboBox rjComboBox2;
         private System.Windows.Forms.Button BTN_INICIAR_VIDEO;
+        private System.Windows.Forms.Button button1;
     }
 }
