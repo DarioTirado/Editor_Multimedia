@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video.DirectShow;
 using AForge.Video;
+using Emgu.CV;
+using Emgu.CV.Structure;
+
 
 namespace Editor_Multimedia
 {
@@ -18,6 +21,8 @@ namespace Editor_Multimedia
         private bool hayDispositivos;
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice Micamara;
+
+        static readonly CascadeClassifier cascadeClassifier = new CascadeClassifier("HOLAUWU.xml");
 
         public CAMARA()
         {
@@ -100,11 +105,49 @@ namespace Editor_Multimedia
             }
         }
 
+        private List<Tuple<Rectangle, int>> personasDetectadas = new List<Tuple<Rectangle, int>>();
+
+
         private void capturavideo(object sender, NewFrameEventArgs eventArgs )
         {
           
-            Bitmap imagen = (Bitmap)eventArgs.Frame.Clone();
-            pictureBox1.Image = imagen;
+            Bitmap frame = (Bitmap)eventArgs.Frame.Clone();
+         
+
+            using (Image<Bgr, byte> currentFrame = BitmapExtension.ToImage<Bgr, byte>(frame))
+            using (Image<Gray, byte> gray = currentFrame.Convert<Gray, byte>())
+            {
+                Rectangle[] facesDetected = cascadeClassifier.DetectMultiScale(gray, 1.1, 3, new Size(20, 20));
+
+                personasDetectadas.Clear();
+
+                int numeroPersona = 1;
+                foreach (Rectangle rectangulo in facesDetected)
+                {
+                    personasDetectadas.Add(new Tuple<Rectangle, int>(rectangulo, numeroPersona));
+                    numeroPersona++;
+                }
+
+                foreach (var persona in personasDetectadas)
+                {
+                    Rectangle rectangulo = persona.Item1;
+                    int numPersona = persona.Item2;
+
+                    using (Graphics graphics = Graphics.FromImage(frame))
+                    using (Pen lapiz = new Pen(Color.Yellow, 1))
+                    {
+                        graphics.DrawRectangle(lapiz, rectangulo);
+                        graphics.DrawString(numPersona.ToString(), new Font("Arial", 12), Brushes.Blue, rectangulo.Location);
+                    }
+                }
+
+                pictureBox1.Image = frame;
+            }
+
+
+
+
+         
         }
 
         private void CAMARA_FormClosed(object sender, FormClosedEventArgs e)
