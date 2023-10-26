@@ -22,7 +22,7 @@ namespace Editor_Multimedia
         private FilterInfoCollection misDispositivos;
         private VideoCaptureDevice Micamara;
 
-        static readonly CascadeClassifier cascadeClassifier = new CascadeClassifier("HOLAUWU.xml");
+        static readonly CascadeClassifier cascadeClassifier = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
 
         public CAMARA()
         {

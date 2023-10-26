@@ -203,5 +203,11 @@
       <Version>5.1.5</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="haarcascade_frontalface_alt_tree.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="HOLAUWU.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
